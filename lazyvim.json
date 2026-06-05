@@ -2,6 +2,7 @@
   "extras": [
     "lazyvim.plugins.extras.ai.sidekick",
     "lazyvim.plugins.extras.editor.fzf",
+    "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.typescript.tsgo",
     "lazyvim.plugins.extras.linting.eslint"
   ],
