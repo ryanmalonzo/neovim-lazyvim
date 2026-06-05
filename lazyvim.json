@@ -2,7 +2,8 @@
   "extras": [
     "lazyvim.plugins.extras.ai.sidekick",
     "lazyvim.plugins.extras.editor.fzf",
-    "lazyvim.plugins.extras.lang.typescript.tsgo"
+    "lazyvim.plugins.extras.lang.typescript.tsgo",
+    "lazyvim.plugins.extras.linting.eslint"
   ],
   "install_version": 8,
   "news": {
