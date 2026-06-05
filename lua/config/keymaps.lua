@@ -9,6 +9,15 @@ vim.keymap.set("n", "<C-c>", function()
   vim.notify("Buffer copied to clipboard", vim.log.levels.INFO)
 end, { desc = "Copy buffer to clipboard" })
 
+-- Override LazyVim's <A-j>/<A-k> line-move defaults for smart-splits.nvim.
+local smartSplits = require("smart-splits")
+vim.keymap.set({ "n", "t" }, "<A-j>", smartSplits.move_cursor_down, { desc = "Move to split below" })
+vim.keymap.set({ "n", "t" }, "<A-k>", smartSplits.move_cursor_up, { desc = "Move to split above" })
+pcall(vim.keymap.del, "i", "<A-j>")
+pcall(vim.keymap.del, "i", "<A-k>")
+pcall(vim.keymap.del, "v", "<A-j>")
+pcall(vim.keymap.del, "v", "<A-k>")
+
 vim.keymap.set("n", "<C-v>", function()
   local content = vim.fn.getreg("+")
   local lines = vim.split(content, "\n")
